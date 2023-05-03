@@ -11,6 +11,12 @@
         />
         الصلاة المفروضة
       </a>
+      <input
+        class="form-control"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
     </div>
   </nav>
 </template>
