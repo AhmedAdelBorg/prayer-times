@@ -1,6 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-
+import FajrPage from "../components/fajrPage.vue";
+import SunrisePage from "../components/sunrisePage.vue";
+import DhuhrPage from "../components/dhuhrPage.vue";
+import AsrPage from "../components/asrPage.vue";
+import MaghribPage from "../components/maghribPage.vue";
+import IshaPage from "../components/ishaPage.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
@@ -8,13 +13,34 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/fajr",
+    name: "fajr",
+    component: FajrPage,
+  },
+  {
+    path: "/sunrise",
+    name: "sunrise",
+    component: SunrisePage,
+  },
+  {
+    path: "/dhuhr",
+    name: "dhuhr",
+    component: DhuhrPage,
+  },
+  {
+    path: "/asr",
+    name: "asr",
+    component: AsrPage,
+  },
+  {
+    path: "/maghrib",
+    name: "maghrib",
+    component: MaghribPage,
+  },
+  {
+    path: "/isha",
+    name: "isha",
+    component: IshaPage,
   },
 ];
 

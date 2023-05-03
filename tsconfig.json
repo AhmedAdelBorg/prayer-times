@@ -5,6 +5,7 @@
     "strict": true,
     "jsx": "preserve",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,10 +18,8 @@
       "webpack-env",
       "jest"
     ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
+    "paths": { 
+      "@/*":["./src/*"] 
     },
     "lib": [
       "esnext",

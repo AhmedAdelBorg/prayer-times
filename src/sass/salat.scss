@@ -1,0 +1,35 @@
+.prayer-home {
+  width: 900px;
+  margin: 90px 370px;
+  background-color: #212529;
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .prayer-time {
+    background-color: #9aca43;
+    border: 1px solid #212529;
+    border-radius: 20px;
+    margin: 10px;
+    .form-select {
+      width: 250px;
+      text-align: center;
+    }
+    .the-time {
+      flex-direction: row-reverse;
+      gap: 10px;
+      color: #fff;
+      .unit {
+        border: 1px solid #212529;
+        border-radius: 6px;
+        text-align: center;
+        width: 100px;
+        span {
+          display: block;
+          font-size: 30px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
