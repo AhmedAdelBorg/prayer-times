@@ -1,7 +1,7 @@
 <template>
   <div class="card prayer-home">
     <div class="card-body">
-      <img src="../assets/image/fagr.jpg" alt="" />
+      <img src="../assets/image/Sunrise.jpg" alt="" />
       <div class="prayer-time d-flex justify-content-around align-items-center">
         <div class="location">
           <h1 id="header">{{ header }}</h1>
@@ -61,7 +61,7 @@ export default defineComponent({
         "المنيا",
         "كفر الشيخ",
         "دسوق",
-      ] as any,
+      ],
     };
   },
   methods: {

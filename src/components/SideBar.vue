@@ -23,7 +23,6 @@
           <a
             class="list-group-item list-group-item-action py-3"
             aria-current="true"
-            :class="{ active: isActive }"
           >
             <span>الفجر</span>
           </a>
@@ -32,7 +31,6 @@
           <a
             class="list-group-item list-group-item-action py-3"
             aria-current="true"
-            :class="{ active: isActive }"
           >
             <span>الشروق</span>
           </a>
@@ -41,7 +39,6 @@
           <a
             class="list-group-item list-group-item-action py-3"
             aria-current="true"
-            :class="{ active: isActive }"
           >
             <span>الظهر</span>
           </a>
@@ -50,7 +47,6 @@
           <a
             class="list-group-item list-group-item-action py-3"
             aria-current="true"
-            :class="{ active: isActive }"
           >
             <span>العصر</span>
           </a>
@@ -59,7 +55,6 @@
           <a
             class="list-group-item list-group-item-action py-3"
             aria-current="true"
-            :class="{ active: isActive }"
           >
             <span>المغرب</span>
           </a>
@@ -68,7 +63,7 @@
           <a
             class="list-group-item list-group-item-action py-3"
             aria-current="true"
-            :class="{ active: isActive }"
+            @click="addClassActive"
           >
             <span>العشاء</span>
           </a>
@@ -87,10 +82,13 @@ export default defineComponent({
       hours: 0,
       minutes: 0,
       seconds: 0,
-      isActive: false,
     };
   },
-  methods: {},
+  methods: {
+    addClassActive() {
+      console.log("clicked");
+    },
+  },
   mounted() {
     setInterval(() => {
       this.hours = new Date().getHours();
