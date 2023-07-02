@@ -1,7 +1,6 @@
 .prayer-home {
-  width: 900px;
-  margin: 90px 370px 30px;
   background-color: #212529;
+  margin: 20px;
   img {
     width: 100%;
     border-radius: 10px;
@@ -31,5 +30,11 @@
         }
       }
     }
+  }
+}
+@media (min-width: 991.98px) {
+  .prayer-home {
+    width: 67%;
+    float: left;
   }
 }

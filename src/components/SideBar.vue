@@ -1,5 +1,5 @@
 <template>
-  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-dark">
+  <nav id="sidebarMenu" class="d-lg-block sidebar collapse bg-dark">
     <div class="the-time d-flex justify-content-center align-items-center">
       <div class="unit">
         <span class="hours" v-if="hours > 10">{{ hours }}</span>
@@ -8,7 +8,9 @@
       </div>
       <div class="unit">
         <span class="minutes" v-if="minutes > 10">{{ minutes }}</span>
-        <span class="minutes" v-if="minutes < 10">0{{ minutes }}</span>
+        <span class="minutes" v-if="minutes < 10 || minutes == 0"
+          >0{{ minutes }}</span
+        >
         <span>M</span>
       </div>
       <div class="unit">
@@ -63,7 +65,6 @@
           <a
             class="list-group-item list-group-item-action py-3"
             aria-current="true"
-            @click="addClassActive"
           >
             <span>العشاء</span>
           </a>
@@ -83,11 +84,6 @@ export default defineComponent({
       minutes: 0,
       seconds: 0,
     };
-  },
-  methods: {
-    addClassActive() {
-      console.log("clicked");
-    },
   },
   mounted() {
     setInterval(() => {

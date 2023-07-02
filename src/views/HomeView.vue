@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div class="home"></div>
 </template>
 
 <script lang="ts">
@@ -17,15 +17,10 @@ export default defineComponent({
     });
 
     const result = await axios.get(
-      `http://api.aladhan.com/v1/timingsByCity?city=egcairo&country=cairo`
+      `http://api.aladhan.com/v1/timingsByCity?city=eg&country=cairo`
     );
 
-    console.log(time);
-    console.log(result.data.data.timings);
-
-    if (result.data.data.timings.Fajr > time) {
-      this.$router.push({ name: "fajr" });
-    } else if (result.data.data.timings.Sunrise > time) {
+    if (result.data.data.timings.Sunrise > time) {
       this.$router.push({ name: "sunrise" });
     } else if (result.data.data.timings.Dhuhr > time) {
       this.$router.push({ name: "dhuhr" });
@@ -35,6 +30,8 @@ export default defineComponent({
       this.$router.push({ name: "maghrib" });
     } else if (result.data.data.timings.Isha > time) {
       this.$router.push({ name: "isha" });
+    } else if (result.data.data.timings.Fajr < time) {
+      this.$router.push({ name: "fajr" });
     }
   },
 });

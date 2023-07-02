@@ -71,7 +71,7 @@ export default defineComponent({
     },
     async getPreyerTime() {
       const result = await axios.get(
-        `http://api.aladhan.com/v1/timingsByCity?city=egcairo&country=${this.header}`
+        `http://api.aladhan.com/v1/timingsByCity?city=eg&country=${this.header}`
       );
       if (result.status == 200) {
         this.time = result.data.data.timings.Isha;
