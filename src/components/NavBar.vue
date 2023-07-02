@@ -78,36 +78,11 @@
       </div>
     </div>
   </nav>
-  <!-- <nav class="navbar navbar-dark bg-dark sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img
-          src="../assets/logo.png"
-          alt=""
-          width="70"
-          height="30"
-          class="d-inline-block align-text-top"
-        />
-        الصلاة المفروضة
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarToggleExternalContent"
-        aria-controls="navbarToggleExternalContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </nav> -->
 </template>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 a {
-  color: #9ccb44;
+  color: #222222;
 }
 @media (min-width: 991.98px) {
   .position-sticky {

@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import testView from "../views/testView.vue";
 import FajrPage from "../components/fajrPage.vue";
 import SunrisePage from "../components/sunrisePage.vue";
 import DhuhrPage from "../components/dhuhrPage.vue";
@@ -12,11 +11,6 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "home",
     component: HomeView,
-  },
-  {
-    path: "/test",
-    name: "test",
-    component: testView,
   },
   {
     path: "/fajr",
